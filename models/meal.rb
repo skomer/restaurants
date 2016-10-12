@@ -2,7 +2,8 @@ require_relative '../db/sql_runner.rb'
 
 class Meal
 
-  attr_reader :id, :name, :restaurant_id
+  attr_reader :id, :restaurant_id
+  attr_accessor :name
 
   def initialize(options)
     @id = options['id'].to_i
@@ -28,6 +29,16 @@ class Meal
     result = Restaurant.new(restaurant)
     return result
   end
+
+  def update
+    sql = "
+      UPDATE meals
+      SET name = '#{@name}'
+      WHERE id = '#{@id}';
+    "
+    return SqlRunner.run(sql)
+  end
+
 
 
 end

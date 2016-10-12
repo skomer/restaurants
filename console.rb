@@ -20,25 +20,9 @@ meal3.save()
 meal4 = Meal.new({'name' => "Irish Stew", 'restaurant_id' => shamrock.id})
 meal4.save()
 
-
-binding.pry
-nil
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# meal4 = Meal.new({'name' => "Irish Stew", 'restaurant_id' => shamrock.id})
+# meal4 = Meal.new({'name' => "Irish Stew", 'restaurant_id' => shamrock.id})
+# meal4 = Meal.new({'name' => "Irish Stew", 'restaurant_id' => shamrock.id})
 
 
 binding.pry
